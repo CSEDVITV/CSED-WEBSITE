@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hide scrollbar but keep the page scrollable */
+body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Hide the scrollbar on the body */
+    height: 100vh; /* Full viewport height */
+}
+
+.scrollable-container {
+    overflow: auto; /* Allows scrolling inside this container */
+    height: 100vh; /* Ensure container takes full viewport height */
+}
+
+/* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+.scrollable-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/* Hide scrollbar in Firefox */
+.scrollable-container {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar in IE/Edge */
+.scrollable-container {
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+
+
+
+header {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 20px;
+}
+
+.logo {
+    width: 200px;
+}
+
+main {
+    text-align: center;
+    margin-top: 10px;
+}
+
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.2rem;
+    margin: 0 20px 20px;
+    background: linear-gradient(90deg, #ff0d05, #ff6b00, #ffda05); /* Define the gradient colors */
+    background-size: 300%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 6s ease-in-out infinite; /* Animate the gradient */
+}
+
+/* Keyframes for the gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#countdown {
+    font-family: 'Arcade Normal';
+    color: aliceblue;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.important {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: rgb(241, 241, 241);
+    margin-bottom: 50px;
+}
+
+.important1 {
+    margin-top: 50px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+}
+
+.blink {
+    color: #e2120b;
+    font-weight: bold;
+    animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns on desktop */
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.square {
+    position: relative;
+    
+    padding: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    overflow: hidden; /* Hide overflow to prevent the animation from spilling outside the square */
+    border: solid 2px transparent;
+    --border-angle: 0turn;
+    --main-bg: conic-gradient(from var(--border-angle), #525252, #262626 0%, #1e1e1e 10%, #141414 10%); /* Grey gradient border */
+    --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #d5a907, #f7f7f7 75%, transparent); /* Red gradient */
+    background: var(--main-bg) padding-box, var(--gradient-border) border-box, var(--main-bg) border-box;
+    animation: bg-spin 3s linear infinite;
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+.square img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.square p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    background-color: #e40000; /* Dark background */
+    color: white;
+    padding: 12px 20px;
+    margin-top: 15px;
+    height: 60px;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+}
+
+.square p:hover {
+    background-color: #f1f1f1; /* Darker orange on hover */
+    color: #1e1e1e;
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+a {
+    color: #e2120b;
+    text-decoration: none; /* Removes underline from links */
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-family: 'Goldman', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.footer-marquee-content {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: footer-marquee 100s linear infinite;
+}
+
+.footer-marquee-content span {
+    padding-right: 5px; /* Space between the repeated texts */
+}
+
+@keyframes footer-marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+#footertop {
+    background-color: #e2120b;
+    color: white;
+    padding: 8px;
+    font-size: 2rem;
+    font-family: 'Goldman', sans-serif; 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    overflow: hidden; 
+}
+
+.marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marquee 200s linear infinite;
+}
+
+.marquee-content span {
+    padding-right: 5px; 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .logo {
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr; 
+    }
+
+    .logo {
+        width: 150px;
+    }
+    #countdown {
+        font-family: 'Arcade Normal', sans-serif;
+    }
+}
