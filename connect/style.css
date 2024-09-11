@@ -75,14 +75,13 @@ h1 {
     }
 }
 
-
 #countdown {
-    font-family: 'Arcade Normal';
-    color: aliceblue;
-    font-weight: 700;
-    text-align: center;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
+        font-family: 'Arcade Normal';
+        color: aliceblue;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
 }
 
 .important {
@@ -262,6 +261,9 @@ footer {
 
     .logo {
         width: 80px;
+    }
+    #countdown {
+        font-family: 'Arcade Normal', sans-serif;
     }
 }
 
