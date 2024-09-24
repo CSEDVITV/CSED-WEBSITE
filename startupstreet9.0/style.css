@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Gravedigger';
+    src: url('Gravedigger.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #070407;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.content-container {
+    margin-top: 10%;
+    text-align: center;
+    width: 90%;
+    opacity: 0; /* Start invisible */
+}
+
+h1 {
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 2vh;
+    border: solid 3px transparent;
+    border-radius: 8px;
+    background: linear-gradient(to right, #6607a2, #8e38c2);
+    background-clip: padding-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ss {
+    font-family: 'Gravedigger', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    font-size: 5vw;
+    color: #fff;
+    background: linear-gradient(90deg, #a142dc, #8e38c2, #ffffff, #d65fff, #a142dc);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 8s linear infinite;
+    letter-spacing: 2px;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+/* Keyframes for upward movement */
+@keyframes moveUp {
+    from {
+        transform: translateY(50px); /* Start 50px lower */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* End at the normal position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Apply the animation class */
+.content-container.animate {
+    animation: moveUp 0.5s ease-out forwards; /* Keep the end state */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-top: 5vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    width: 40%;
+    padding: 15px;
+    background: linear-gradient(90deg, rgba(220, 220, 220, 0.1), rgba(221, 86, 255, 0.1));
+    color: white;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    font-size: 1.6vw;
+    font-family: 'Palanquin Dark', sans-serif;
+    cursor: pointer;
+    margin-top: 3vh;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+
+    box-shadow: 0 12px 24px rgba(212, 71, 247, 0.5);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(212, 71, 247, 0.7);
+    background: linear-gradient(90deg, rgba(221, 86, 255, 0.2), rgba(220, 220, 220, 0.2));
+}
+
+.btn:hover {
+    background-color: #510681;
+}
+
+@media (max-width: 480px) {
+    .ss {
+        font-size: 10vw;
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack the buttons vertically on mobile */
+        gap: 20px; /* Reduce the gap for mobile view */
+    }
+
+    .btn {
+        width: 80%;
+        font-size: 16px;
+    }
+}

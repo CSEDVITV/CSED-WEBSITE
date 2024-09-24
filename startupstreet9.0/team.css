@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Gravedigger';
+    src: url('Gravedigger.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #070407;
+    overflow: hidden; /* Hide the scrollbar on the body */
+    height: 100vh;
+}
+
+.container {
+    color: #ffffff;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    backdrop-filter: blur(100px);
+    background-color: rgba(225, 211, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-bottom: 15vh;
+
+}
+
+h1 {
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 1vh;
+    border: solid 3px transparent; 
+    border-radius: 8px; 
+    background: linear-gradient(to right, #6607a2, #8e38c2);
+    background-clip: padding-box; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Palanquin Dark', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    width: 30%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    
+    padding: 10px 20px;
+    margin-top: 2vh;
+    border: solid 3px transparent; 
+    border-radius: 8px; 
+    background: linear-gradient(to right, #6607a2, #8e38c2);
+    background-clip: padding-box; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ss {
+    font-family: 'Gravedigger', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    font-size: 4vw;
+    color: #fff; /* Fallback color */
+    background: linear-gradient(90deg, #a142dc, #8e38c2, #ffffff, #d65fff, #a142dc);
+    background-size: 200% 100%; /* Increase background size to create smoother gradient movement */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 8s linear infinite; /* Slower and smoother gradient movement */
+    letter-spacing: 2px; /* Add some spacing between letters for a modern look */
+}
+
+/* Keyframes for smoother gradient movement */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 0%; /* Move the gradient horizontally to give it a smooth flow */
+    }
+}
+
+.inst {
+    padding: 10px 20px;
+    margin-top: 2vh;
+    border: solid 1px ; 
+    border-radius: 8px; 
+    
+    background-clip: padding-box; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.inst2{
+    width: 50%;
+    padding: 10px 0px;
+    margin-top: 1vh;  
+    border-radius: 2px;
+    margin-bottom: 20px;
+   
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-family: Poppins, 'Arial Narrow', Arial, sans-serif;
+
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* General input styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    background-color: #ffffff00; /* Darker background */
+    color: #ffffff; /* Text color */
+    border: none; /* No border */
+    border-bottom: 2px solid transparent; /* Invisible underline by default */
+    padding: 10px;
+    font-size: 16px;
+    width: 100%; /* Full width */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease; /* Smooth transition for underline */
+    border-bottom: 2px solid #d796ff;
+}
+
+/* Focused input style with light violet underline */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    background-color: #1d1d1dee;
+    border-bottom: 2px solid #a142dc; /* Light violet underline on focus */
+}
+
+/* Placeholder text color */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+    color: #b3b3b3; /* Lighter color for placeholder */
+}
+
+/* For dropdowns */
+select {
+    background-color: #a7a7a734; /* Darker background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-bottom: 2px solid transparent;
+    appearance: none; /* Remove default dropdown arrow */
+}
+
+/* Hover effect for input fields */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+select:hover {
+    border-bottom: 2px solid #a142dc; /* Same light violet on hover */
+}
+
+/* Disabled inputs */
+input[type="text"]:disabled,
+input[type="email"]:disabled,
+input[type="tel"]:disabled,
+select:disabled {
+    background-color: #1f1f1f; /* Darker grey when disabled */
+    color: #777; /* Muted text color */
+    border-bottom: 2px solid #444; /* Muted underline */
+}
+
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 50%;
+    padding: 15px;
+    background: linear-gradient(90deg, rgba(220, 220, 220, 0.1), rgba(221, 86, 255, 0.1));
+    color: white;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 3vh;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    
+    /* Enhanced box-shadow for better visibility */
+    box-shadow: 0 12px 24px rgba(212, 71, 247, 0.5);
+}
+
+/* Hover effect with animation */
+button:hover {
+    transform: translateY(-5px); /* Move the button up on hover */
+    
+    box-shadow: 0 20px 40px rgba(212, 71, 247, 0.7); /* Stronger shadow on hover */
+    background: linear-gradient(90deg, rgba(221, 86, 255, 0.2), rgba(220, 220, 220, 0.2)); /* Slightly brighter gradient */
+}
+
+
+button:hover {
+    background-color: #510681;
+}
+
+.hidden {
+    display: none;
+}
+
+.scrollable-container {
+    overflow: auto; 
+    height: 100vh; 
+}
+
+.scrollable-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.scrollable-container {
+    scrollbar-width: none; 
+}
+
+.scrollable-container {
+    -ms-overflow-style: none; 
+}
+
+
+.shadeblur {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    filter: blur(400px);
+    border-radius: 50%;
+    background-color: #8e38c2;
+    width: 50vw;
+    height: 50vw;
+}
+
+.shadeblur2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    filter: blur(300px);
+    border-radius: 50%;
+    background-color: #a142dc;
+    width: 35vw;
+    height: 35vw;
+}
+
+@media (min-width: 768px) {
+
+    
+    
+    .container {
+        width: 60%;
+    }
+
+    .shadeblur {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .shadeblur2 {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+
+    .container{
+        padding: 20px 26px;
+    }
+    
+    button{
+        width: 80%;
+    }
+
+    .ss{
+        font-size: 5vw;
+    }
+
+    .inst2{
+        width: 100%;
+    }
+
+    h1{
+        width: 100%;
+        font-size: 6vw;
+    }
+
+    h2{
+        width: 68%;
+        font-size: 5vw;
+    }
+}
+
+
+/* Popup styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: rgba(225, 211, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+.popup-content p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.popup-content button {
+    background-color: #a142dc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #8e38c2;
+}
+
+/* Hide popup by default */
+.hidden {
+    display: none;
+}

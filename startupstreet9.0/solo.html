@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Street 9.0 Registration</title>
+  <link rel="stylesheet" href="solo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gravedigger:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" />
+
+</head>
+
+<body>
+  <div class="shadeblur"></div>
+        <div class="shadeblur2"></div>
+  <div class="content">
+    <div id="main-heading">STARTUP STREET 9.0</div>
+    <div class="container">
+      <h2 id="second-heading">Solo Registration</h2>
+      <div id="error-container"></div>
+      <form class="details" id="registrationForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+          <label for="regNo">Registration Number</label>
+          <input type="text" id="regNo" name="regNo" placeholder="Enter your registration number" minlength="9" maxlength="9">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Phone number" pattern="\d*" minlength="10" maxlength="13">
+        </div>
+        <div class="form-group buttons">
+          <button type="submit" id="submitBtn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <p>Registration submitted successfully!</p>
+      <p>Join the Whatsapp group for further instructions.</p>
+      <a href="https://chat.whatsapp.com/Jsunspqj7Zj5oBcZp25TB0"><button id="closePopupBtn">Join Now</button></a>
+    </div>
+  </div>
+
+  <script src="solo.js"></script>
+</body>
+
+</html>

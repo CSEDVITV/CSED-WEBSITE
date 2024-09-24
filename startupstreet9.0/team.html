@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Street 9.0 Team Registration</title>
+    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" />
+
+</head>
+
+<body>
+    <div class="scrollable-container">
+        <div class="shadeblur"></div>
+        <div class="shadeblur2"></div>
+
+        <div>
+            <h1 class="ss">STARTUP STREET 9.0</h1>
+        </div>
+        <div class="container">
+            <h1>Team Registration</h1>
+
+            <div class="inst">
+                <p>Instructions:</p>
+                <ul>
+                    <li>All fields are mandatory.</li>
+                    <li>Enter your VIT email for leader registration.</li>
+                </ul>
+            </div>
+
+            <form id="teamRegistrationForm" method="post"
+                action="https://script.google.com/macros/s/AKfycbzasYQ2AGYU88E69LhkwcafdM4tvIGXiN33yRA6mMjJsP5F2_9DD2Ch5hHEUqiqlEiuNQ/exec">
+                <!-- Leader Details Section -->
+                <section>
+                    <h2>Leader Details</h2>
+                    <div class="form-group">
+                        <label for="teamName">Team Name:</label>
+                        <input type="text" id="teamName" name="teamName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="leaderName">Leader Name:</label>
+                        <input type="text" id="leaderName" name="leaderName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="leaderRegNumber">Leader Registration Number:</label>
+                        <input type="text" id="leaderRegNumber" name="leaderRegNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="leaderEmail">Leader VIT Email:</label>
+                        <input type="email" id="leaderEmail" name="leaderEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="leaderPhone">Leader Phone Number:</label>
+                        <input type="tel" id="leaderPhone" name="leaderPhone" required pattern="[0-9]{10}">
+                    </div>
+                </section>
+
+                <!-- Member Details Section -->
+                <section>
+                    <h2>Team Members</h2>
+                    <div class="inst2">
+                        <p>
+                        <ul>
+                            <li>Enter your team member details.</li>
+                        </ul>
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numMembers">Number of Members:</label>
+                        <select id="numMembers" name="numMembers" required>
+                            <option value="">Select</option>
+                            <option value="2">2 Members</option>
+                            <option value="3">3 Members</option>
+                            <option value="4">4 Members</option>
+                            <option value="5">5 Members</option>
+                        </select>
+                    </div>
+
+                    <!-- Member 1 Details -->
+                    <div id="member1Fields" class="hidden">
+                        <div class="form-group">
+                            <label for="member1Name">Member 1 Name:</label>
+                            <input type="text" id="member1Name" name="member1Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="member1RegNumber">Member 1 Registration Number:</label>
+                            <input type="text" id="member1RegNumber" name="member1RegNumber">
+                        </div>
+                    </div>
+
+                    <!-- Member 2 Details -->
+                    <div id="member2Fields" class="hidden">
+                        <div class="form-group">
+                            <label for="member2Name">Member 2 Name:</label>
+                            <input type="text" id="member2Name" name="member2Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="member2RegNumber">Member 2 Registration Number:</label>
+                            <input type="text" id="member2RegNumber" name="member2RegNumber">
+                        </div>
+                    </div>
+
+                    <!-- Member 3 Details -->
+                    <div id="member3Fields" class="hidden">
+                        <div class="form-group">
+                            <label for="member3Name">Member 3 Name:</label>
+                            <input type="text" id="member3Name" name="member3Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="member3RegNumber">Member 3 Registration Number:</label>
+                            <input type="text" id="member3RegNumber" name="member3RegNumber">
+                        </div>
+                    </div>
+
+                    <!-- Member 4 Details -->
+                    <div id="member4Fields" class="hidden">
+                        <div class="form-group">
+                            <label for="member4Name">Member 4 Name:</label>
+                            <input type="text" id="member4Name" name="member4Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="member4RegNumber">Member 4 Registration Number:</label>
+                            <input type="text" id="member4RegNumber" name="member4RegNumber">
+                        </div>
+                    </div>
+
+
+                </section>
+                <div class="center">
+                    <button type="submit" id="submitBtn">Submit Team Details</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Popup Confirmation Message -->
+        <div id="popup" class="popup hidden">
+            <div class="popup-content">
+                <p>Team details submitted successfully!</p>
+                <p><b>Join Team Leader Whatsapp group.</b></p>
+                <a href="https://chat.whatsapp.com/Jsunspqj7Zj5oBcZp25TB0"><button id="closePopupBtn">Join
+                        Now</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="team.js"></script>
+</body>
+
+</html>
