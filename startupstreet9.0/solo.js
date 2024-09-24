@@ -53,7 +53,7 @@ document.querySelector(".details").addEventListener("submit", function (event) {
 
         // Redirect to the desired link after a short delay
         setTimeout(() => {
-          window.location.href = "YOUR_REDIRECT_URL_HERE"; // Replace with your desired URL
+          window.location.href = "https://chat.whatsapp.com/CWMK30RXaO37Ft6OedNEGh"; // Replace with your desired URL
         }, 10000); // 10 seconds delay
       } else {
         showError("There was an error submitting your registration. Please try again.");
