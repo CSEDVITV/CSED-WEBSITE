@@ -38,7 +38,7 @@ document.querySelector(".details").addEventListener("submit", function (event) {
   formData.append("phone", phone);
 
   // Submit the form data
-  fetch("https://script.google.com/macros/s/AKfycbyruEzUIf_tk0nXRdnxO9a1KONr2bP2dsz-nwJ4OzwJSZQwmdjUF-UxiyEO1lHI8Zdu/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbyruEzUIf_tk0nXRdnxO9a1KONr2bP2dsz-nwJ4OzwJSZQwmdjUF-UxiyEO1lHI8Zdu/exe", {
     method: "POST",
     body: formData,
   })
