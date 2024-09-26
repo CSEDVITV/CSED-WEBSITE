@@ -35,6 +35,17 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.mes{
+    text-align: center;
+    font-family: Palanquin Dark;
+    margin-top: 5vh;
+    padding: 10px 20px;
+    font-size: 1.5vw;
+    border-radius: 8px;
+    color: #ffffff;
+    
+}
+
 .ss {
     font-family: 'Gravedigger', 'Arial Narrow', Arial, sans-serif;
     margin-top: 10vh;
@@ -128,5 +139,8 @@ a {
     .btn {
         width: 80%;
         font-size: 16px;
+    }
+    .mes{
+        font-size: 3.8vw;
     }
 }
