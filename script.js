@@ -174,12 +174,10 @@ const menupurchaseicon = document.querySelector(
 );
 
 menupurchase.addEventListener("mouseenter", function () {
-  menupurchaseicon.style.opacity = "1";
   menupurchaseicon.style.transform = "scale(1.1)";
 });
 
 menupurchase.addEventListener("mouseleave", function () {
-  menupurchaseicon.style.opacity = "0";
   menupurchaseicon.style.transform = "scale(1)";
 });
 

@@ -4,16 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO META ====== -->
+  <title>CSED VIT — Social Entrepreneurship, Events & Community</title>
   <meta name="description"
     content="CSED VIT fosters social entrepreneurship, development, and impactful business solutions. Explore innovative projects driving change." />
+  <link rel="canonical" href="https://csedvit.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ====== OPEN GRAPH / TWITTER ====== -->
   <meta property="og:title" content="CSED VIT - Empowering Social Entrepreneurship" />
   <meta property="og:description"
     content="CSED VIT fosters social entrepreneurship, development, and impactful business solutions. Explore innovative projects driving change." />
   <meta property="og:image" content="https://csedvit.com/load.jpg" />
   <meta property="og:url" content="https://csedvit.com" />
-  <title>CSED VIT</title>
-  <meta name="author" content="Anurag Adarsh Technical Head '24 , Kamal Sinha Technical Team , Sarthak Krishak Technical Team">
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ====== AUTHORS ====== -->
+  <meta name="author"
+    content="Sarthak Krishak Technical Team, Anurag Adarsh Technical Team, Kamal Sinha Technical Team">
+
+  <!-- ====== FAVICON ====== -->
   <link rel="icon" href="./assests/favicon-5.ico" type="image/x-icon" />
+
+  <!-- ====== FONTS & CSS ====== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
@@ -21,24 +35,134 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+
+  <!-- =========================================================
+       STRUCTURED DATA FOR GOOGLE RICH RESULTS & SITELINKS
+       ========================================================= -->
+
+  <!-- 1) ORGANIZATION + WEBSITE + NAVIGATION + BREADCRUMBS -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "CSED VIT",
-  "url": "https://csedvit.com",
-  "logo": "./assests/favicon-5.ico",
-  "sameAs": [
-    "https://www.facebook.com/csed.vit.in",
-    "https://x.com/csed_twt",
-    "https://www.instagram.com/csed.vit"
-  ],
-  "description": "CSED VIT fosters social entrepreneurship, development, and impactful business solutions. Explore innovative projects driving change."
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://csedvit.com/#org",
+      "name": "CSED VIT",
+      "url": "https://csedvit.com",
+      "logo": "https://csedvit.com/assests/favicon-5.ico",
+      "sameAs": [
+        "https://www.facebook.com/csed.vit.in",
+        "https://x.com/csed_twt",
+        "https://www.instagram.com/csed.vit"
+      ],
+      "description": "CSED VIT fosters social entrepreneurship, development, and impactful business solutions."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://csedvit.com/#website",
+      "url": "https://csedvit.com/",
+      "name": "CSED VIT",
+      "publisher": { "@id": "https://csedvit.com/#org" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://csedvit.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Main navigation",
+      "url": [
+        "https://csedvit.com/#page2",
+        "https://csedvit.com/#events",
+        "https://csedvit.com/#blogs",
+        "https://csedvit.com/#teams",
+        "https://csedvit.com/dev.html"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://csedvit.com/#home",
+      "url": "https://csedvit.com/",
+      "name": "CSED VIT — Home",
+      "isPartOf": { "@id": "https://csedvit.com/#website" },
+      "breadcrumb": { "@id": "https://csedvit.com/#breadcrumbs" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://csedvit.com/#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://csedvit.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Events", "item": "https://csedvit.com/#events" },
+        { "@type": "ListItem", "position": 3, "name": "Blogs", "item": "https://csedvit.com/#blogs" }
+      ]
+    }
+  ]
 }
-    </script>
+  </script>
+
+  <!-- 2) FAQ STRUCTURED DATA (MATCHES YOUR VISIBLE FAQ CONTENT) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to join CSED at VIT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can join CSED by registering on VTOP during the club enrollment periods conducted each academic year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of events and activities does CSED organize?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSED organizes events to raise awareness on social entrepreneurship, provide real-world insights, conduct outreach, and host speaker sessions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I participate in CSED events?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can participate by registering through VTOP and following CSED on Instagram for announcements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the departments within CSED?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Departments include R&D, Marketing, Tech & Design, Events, PR, HR, and Editorial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of projects can I work on as a member of CSED?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can work on real-world projects that solve social problems and create meaningful impact."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I stay updated on CSED activities and events?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Follow CSED on Instagram and join the official WhatsApp updates channel."
+      }
+    }
+  ]
+}
+  </script>
 
 </head>
+
 
 <body oncontextmenu="return false">
 
@@ -53,10 +177,10 @@
   <div class="main">
 
     <div class="page1">
-      <img class="gradd" src="./assests/Vector 4.png" alt="image">
+      <img class="gradd" src="./assests/Vector 4.webp" alt="image">
       <nav>
         <div class="nav-left">
-          <a href="./index.html"><img src="./assests/logo.png" loading="lazy" alt="image"></a>
+          <a href="./index.html"><img src="./assests/logo.webp" loading="lazy" alt="image"></a>
         </div>
         <div class="nav-right">
           <span onclick="toggleMenu()">Menu</span><i class="ri-menu-2-line" onclick="toggleMenu()"></i>
@@ -66,23 +190,23 @@
       <div class="menu" id="rax">
         <div class="part1">
           <div class="menu-nav">
-            <a href="./index.html"><img src="./assests/logo.png" loading="lazy" alt="logo" /></a>
+            <a href="./index.html"><img src="./assests/logo.webp" loading="lazy" alt="image" /></a>
             <div class="menu-nav-right">
               <span onclick="toggleMenu()">Close</span><i class="ri-close-line" onclick="toggleMenu()"></i>
             </div>
           </div>
           <div class="menu-content">
             <div class="left">
-              <h2>Announcements🚀</h2>
+              <h2>Announcements <i class="ri-megaphone-fill"></i></h2>
               <div class="tr">
-                <div class="blr" t>
-                  <h3>Register Now!</h3>
+                <div class="blr">
+                  <h3>Coming soon!</h3>
                 </div>
-                <img src="./assests/merch.png" loading="lazy" alt="image" />
+                <img src="./assests/merch.webp" loading="lazy" alt="image" />
               </div>
               <div class="h4-menu">
-                <a href="/startupstreet9.0" target="_blank">
-                  <h4> graVITas '24</h4><!-- <i class="ri-t-shirt-fill"></i> -->
+                <a href="https://www.csedvit.com/" target="_parent">
+                  <h4> Coming Soon </h4><i class="ri-arrow-right-up-line"></i>
                 </a>
               </div>
             </div>
@@ -151,7 +275,7 @@
           </div>
           <div class="landing-footer-right">
             <div class="landing-footer-right-cont">
-              <img src="./assests/VIT White 10.png" loading="lazy" alt="image">
+              <img src="./assests/VIT White 10.webp" loading="lazy" alt="image">
             </div>
 
           </div>
@@ -170,7 +294,7 @@
         <h1>about csed</h1>
         <div class="page2-head1">
           <h3>Our Social Entrepreneurship Journey</h3>
-          <img src="./assests/asterisk.png" alt="image" loading="lazy" />
+          <img src="./assests/asterisk.webp" alt="image" loading="lazy" />
         </div>
       </div>
       <div class="page2-maincontent">
@@ -199,7 +323,7 @@
           </div>
         </div>
         <div class="page2-right">
-          <img src="./assests/page2-right-img.png" alt="image" loading="lazy" />
+          <img src="./assests/page2-right-img.webp" alt="image" loading="lazy" />
         </div>
       </div>
 
@@ -221,21 +345,21 @@
         <div class="page3-left-bottom">
           <div class="page3-left-bottom-t">
             <div class="page3-left-bottom-t-1">
-              <h3 class="counter" data-count="50">0+</h3>
+              <h3 class="counter" data-count="68">0+</h3>
               <h4>Events Organised</h4>
-              <img src="./assests/line.png" alt="image" loading="lazy" />
+              <img src="./assests/line.webp" alt="image" loading="lazy" />
             </div>
             <div class="page3-left-bottom-t-2">
-              <h3 class="counter" data-count="20">0+</h3>
+              <h3 class="counter" data-count="25">0+</h3>
               <h4>Inspiring Speaker</h4>
-              <img src="./assests/line.png" alt="image" loading="lazy" />
+              <img src="./assests/line.webp" alt="image" loading="lazy" />
             </div>
           </div>
           <div class="page3-left-bottom-b">
             <div class="page3-left-bottom-b-1">
-              <h3 class="counter" data-count="5000">0+</h3>
+              <h3 class="counter" data-count="6500">0+</h3>
               <h4>Student Network</h4>
-              <img src="./assests/line.png" alt="image" loading="lazy" />
+              <img src="./assests/line.webp" alt="image" loading="lazy" />
             </div>
             <div class="page3-left-bottom-b-2">
               <h3>Expanded</h3>
@@ -243,7 +367,7 @@
                   <i class="ri-arrow-right-up-line"></i>
                 </div>
               </h4>
-              <img src="./assests/line.png" alt="image" loading="lazy" />
+              <img src="./assests/line.webp" alt="image" loading="lazy" />
             </div>
           </div>
         </div>
@@ -254,13 +378,13 @@
         <div class="page3-right-top">
           <div class="img-slider">
             <div class="slider active">
-              <img src="./assests/page3img1.jpg" alt="image" loading="lazy" />
+              <img src="./assests/page3img1.webp" alt="image" loading="lazy" />
             </div>
             <div class="slider">
-              <img src="./assests/page3img2.jpg" alt="image" loading="lazy" />
+              <img src="./assests/page3img2.webp" alt="image" loading="lazy" />
             </div>
             <div class="slider">
-              <img src="./assests/page3img3.jpg" alt="image" loading="lazy" />
+              <img src="./assests/page3img3.webp" alt="image" loading="lazy" />
             </div>
           </div>
         </div>
@@ -273,7 +397,7 @@
 
     <div class="page4">
       <div class="bg-opacity"></div>
-      <div class="elem" data-img="./assests/p4-img1.jpg" loading="lazy">
+      <div class="elem" data-img="./assests/p4-img1.webp" loading="lazy">
         <h2>Impactful Events</h2>
         <div class="moving">
           <div class="blur"></div>
@@ -313,7 +437,7 @@
         </div>
       </div>
 
-      <div class="elem" data-img="./assests/p4-img2.JPG" loading="lazy">
+      <div class="elem" data-img="./assests/p4-img2.webp" loading="lazy">
         <h2>skill-building workshops</h2>
         <div class="moving">
           <div class="blur"></div>
@@ -393,7 +517,7 @@
         </div>
       </div>
 
-      <div class="elem" data-img="./assests/p4-img4.jpg" loading="lazy">
+      <div class="elem" data-img="./assests/p4-img4.webp" loading="lazy">
         <h2>networking opportunities</h2>
         <div class="moving">
           <div class="blur"></div>
@@ -433,7 +557,7 @@
         </div>
       </div>
 
-      <div class="elem" data-img="./assests/p4-img5.JPG" loading="lazy">
+      <div class="elem" data-img="./assests/p4-img5.webp" loading="lazy">
         <h2>entrepreneur meetups</h2>
         <div class="moving">
           <div class="blur"></div>
@@ -496,17 +620,17 @@
               <div class="light2"></div>
               <div class="light3"></div>
               <div class="light4"></div>
-              <img class="light-glow" src="./assests/Ellipse 50.png" alt="image" loading="lazy" />
+              <img class="light-glow" src="./assests/Ellipse 50.webp" alt="image" loading="lazy" />
             </div>
           </div>
 
           <div class="sec1-cont">
             <div class="sec1-cont-top">
               <div class="sec1-cont-top-p1 anim">
-                <img class="front-1" src="./assests/01.png" alt="image" loading="lazy" />
+                <img class="front-1" src="./assests/01.webp" alt="image" loading="lazy" />
               </div>
               <div class="sec1-cont-top-p2 anim">
-                <img src="./assests/Where Ideas Meet Impact.png" alt="image" loading="lazy" />
+                <img src="./assests/Where Ideas Meet Impact.webp" alt="image" loading="lazy" />
               </div>
             </div>
 
@@ -515,9 +639,9 @@
                 <div class="c1">
                   <h1>CODE 4 CHANGE</h1>
                   <div class="c1-bot">
-                    <img src="./assests/e1.jpg" alt="image" loading="lazy" />
+                    <img src="./assests/e1.webp" alt="image" loading="lazy" />
                     <div class="c1-bot-right">
-                      <img src="./assests/Group 39.png" alt="image" loading="lazy" />
+                      <img src="./assests/Group 39.webp" alt="image" loading="lazy" />
                       <h3>36 HRS<br />IDEATHON+<br />HEXATHON</h3>
                     </div>
                   </div>
@@ -551,11 +675,11 @@
           <div class="sec2-cont">
             <div class="sec2-top">
               <div class="sec2-top-left anim">
-                <img src="./assests/02.png" alt="image" loading="lazy" />
+                <img src="./assests/02.webp" alt="image" loading="lazy" />
               </div>
 
               <div class="sec2-top-right anim">
-                <img src="./assests/Empower Ideas, Ignite Change.png" alt="image" loading="lazy" />
+                <img src="./assests/Empower Ideas, Ignite Change.webp" alt="image" loading="lazy" />
               </div>
             </div>
             <div class="sec2-bot">
@@ -563,35 +687,35 @@
                 <div class="c3">
                   <div class="c3-top">
                     <div class="c3-top-left">
-                      <h3>IDEATE <br />AROUND <br />THE RIDDLE</h3>
-                      <img src="./assests/Group 40.png" alt="image" loading="lazy" />
+                      <h3>BID <br />WITH <br />STRATEGY</h3>
+                      <img src="./assests/Group 40.webp" alt="image" loading="lazy" />
                     </div>
                     <div class="c3-top-right">
-                      <img src="./assests/e2.jpg" alt="image" loading="lazy" />
+                      <img src="./assests/e2.webp" alt="image" loading="lazy" />
                     </div>
                   </div>
                   <div class="c3-bot">
-                    <h1>IMAGINE VENTURE</h1>
+                    <h1>ACTION TO AUCTION</h1>
                   </div>
                 </div>
               </div>
               <div class="c4">
                 <div class="c4-top">
                   <div class="c4-top-first">
-                    <i class="ri-calendar-todo-fill"></i><span>2023</span>
+                    <i class="ri-calendar-todo-fill"></i><span>2024</span>
                   </div>
                   <div class="c4-top-second">
-                    <i class="ri-map-pin-fill"></i><span>RAJAJI HALL</span>
+                    <i class="ri-map-pin-fill"></i><span>MGR Block</span>
                   </div>
                 </div>
 
                 <div class="c4-bot">
                   <i class="ri-arrow-right-s-line"></i>
                   <p>
-                    Imagine Venture was a thrilling event! Teams showcased
-                    ideas, explored social enterprises, and solved riddles.
-                    Collaboration and creativity ignited positive change,
-                    making a real difference!
+                    A thrilling blend of bidding, teamwork and creativity where participants competed for resources,
+                    joined forces to build
+                    a final product and showcased their ideas with confidence. A day filled with strategy, innovation
+                    and fun.
                   </p>
                 </div>
               </div>
@@ -604,7 +728,7 @@
             <div class="l3"></div>
             <div class="l4"></div>
             <div class="l5"></div>
-            <img class="light-glow" src="./assests/Ellipse 50.png" alt="image" loading="lazy" />
+            <img class="light-glow" src="./assests/Ellipse 50.webp" alt="image" loading="lazy" />
           </div>
         </section>
 
@@ -615,17 +739,17 @@
             <div class="lig3"></div>
             <div class="lig4"></div>
             <div class="lig5"></div>
-            <img class="light-glow" src="./assests/Ellipse 50.png" alt="image" loading="lazy" />
+            <img class="light-glow" src="./assests/Ellipse 50.webp" alt="image" loading="lazy" />
           </div>
 
           <div class="sec3-cont">
             <div class="sec3-cont-top">
               <div class="sec3-cont-top-left anim">
-                <img src="./assests/03.png" alt="image" loading="lazy" />
+                <img src="./assests/03.webp" alt="image" loading="lazy" />
               </div>
 
               <div class="sec3-cont-top-right anim">
-                <img src="./assests/Empowering Future Innovators.png" alt="image" loading="lazy" />
+                <img src="./assests/Empowering Future Innovators.webp" alt="image" loading="lazy" />
               </div>
             </div>
             <div class="sec3-cont-bot">
@@ -636,10 +760,10 @@
                   </div>
                   <div class="c5-right">
                     <div class="c5-right-top">
-                      <img src="./assests/e3.jpg" alt="image" loading="lazy" />
+                      <img src="./assests/e3.webp" alt="image" loading="lazy" />
                     </div>
                     <div class="c5-right-bot">
-                      <img src="./assests/Group 41.png" alt="image" loading="lazy" />
+                      <img src="./assests/Group 41.webp" alt="image" loading="lazy" />
                       <h1>INNOVATE<br />PITCH<br />SUCCEED</h1>
                     </div>
                   </div>
@@ -648,17 +772,16 @@
               <div class="c6">
                 <div class="c6-top">
                   <div class="c6-top-first">
-                    <i class="ri-calendar-todo-fill"></i> <span>2022</span>
+                    <i class="ri-calendar-todo-fill"></i> <span>2024</span>
                   </div>
                   <div class="c6-top-second">
-                    <i class="ri-map-pin-fill"></i><span>HOMI BHABHA
-                      GALLERY</span>
+                    <i class="ri-map-pin-fill"></i><span>TT gallery II</span>
                   </div>
                 </div>
                 <div class="c6-bot">
                   <i class="ri-arrow-right-s-line"></i>
                   <p>
-                    Startup Street 7.0 was electrifying! Teams pitched big
+                    Startup Street 9.0 was electrifying! Teams pitched big
                     ideas to top investors, collaborated on UN SDGs, and heard
                     inspiring talks from leading social entrepreneurs.
                     Innovation and excitement filled the air!
@@ -727,7 +850,7 @@
                       the years......</p>
                   </div>
                   <div class="image-content">
-                    <img src="Assets/blogimg1.jpg" alt="error" loading="lazy">
+                    <img src="Assets/blogimg1.webp" alt="image" loading="lazy">
                   </div>
                 </a>
 
@@ -758,7 +881,7 @@
 
                   </div>
                   <div class="image-content" style="background-color: #1B1818">
-                    <img src="Assets/blogimg2.jpg" alt="error" loading="lazy">
+                    <img src="Assets/blogimg2.webp" alt="image" loading="lazy">
                   </div>
                 </a>
               </div>
@@ -780,7 +903,7 @@
                       </div>
                       <div class="headerofcardviewline">3 min read</div>
                     </div>
-                    <h2 class="name">Indias’s True Threads: Rangsutra’s
+                    <h2 class="name">Indias's True Threads: Rangsutra's
                       Ethical Elegance Crafting Changes</h2>
                     <p class="description">Have you ever considered the
                       profound impact a piece of fabric can have on
@@ -789,7 +912,7 @@
                 </a>
 
                 <div class="image-content">
-                  <img src="Assets/blogimg3.jpg" alt="error" loading="lazy">
+                  <img src="Assets/blogimg3.webp" alt="image" loading="lazy">
                 </div>
               </div>
 
@@ -820,7 +943,7 @@
                   </div>
 
                   <div class="image-content" style="background-color: #1B1818">
-                    <img src="Assets/blogimg4.jpg" alt="error" loading="lazy">
+                    <img src="Assets/blogimg4.webp" alt="image" loading="lazy">
                   </div>
                 </a>
               </div>
@@ -851,7 +974,7 @@
                   </div>
 
                   <div class="image-content">
-                    <img src="Assets/blogimg5.jpg" alt="error" loading="lazy">
+                    <img src="Assets/blogimg5.webp" alt="image" loading="lazy">
                   </div>
                 </a>
               </div>
@@ -883,7 +1006,7 @@
                   </div>
 
                   <div class="image-content" style="background-color: #1B1818">
-                    <img src="Assets/blogimg6.jpg" alt="error" loading="lazy">
+                    <img src="Assets/blogimg6.webp" alt="image" loading="lazy">
                   </div>
                 </a>
               </div>
@@ -909,10 +1032,10 @@
         <div class="teamspageleftpageimage">
           <div class="teamscontainerleft">
 
-            <div class="divva" id="divva"> <img id="myImage" src="./Assets/24 board photo red.png"
+            <div class="divva" id="divva"> <img id="myImage" src="./Assets/24 board photo red.webp"
                 alt="Error loading Image" loading="lazy"></div>
 
-            <div id="divvb" class="divvb"> <img src="./Assets/teamspageleftimg2.png" alt="error" loading="lazy"> </div>
+            <div id="divvb" class="divvb"> <img src="./Assets/teamspageleftimg2.webp" alt="error" loading="lazy"> </div>
 
             <div class="numberrr">
               <p class="numberrrpara">20<span>2</span>
@@ -955,9 +1078,9 @@
 
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/yash.new.png" alt="error" class="fgyash" loading="lazy">
+                      <img src="Assets/yash.new.webp" alt="error" class="fgyash" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -994,9 +1117,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="image" class="bgrect" loading="lazy">
 
-                      <img src="Assets/adhidev.png" alt="error" class="fgadhidev" loading="lazy">
+                      <img src="Assets/adhidev.webp" alt="image" class="fgadhidev" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1034,9 +1157,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="image" class="bgrect" loading="lazy">
 
-                      <img src="Assets/aakash.png" alt="error" class="fgaakash" loading="lazy">
+                      <img src="Assets/aakash.webp" alt="image" class="fgaakash" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1076,9 +1199,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/vibhu.png" alt="error" class="fgvibhu" loading="lazy">
+                      <img src="Assets/vibhu.webp" alt="error" class="fgvibhu" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1117,9 +1240,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="image" class="bgrect" loading="lazy">
 
-                      <img src="Assets/anurag.png" alt="error" class="fganurag" loading="lazy">
+                      <img src="Assets/anurag.webp" alt="image" class="fganurag" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1159,9 +1282,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="image" class="bgrect" loading="lazy">
 
-                      <img src="Assets/ayushi.png" alt="error" class="fgayushi" loading="lazy">
+                      <img src="Assets/ayushi.webp" alt="image" class="fgayushi" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1201,9 +1324,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/krishna.png" alt="error" class="fgkrishna" loading="lazy">
+                      <img src="Assets/krishna.webp" alt="error" class="fgkrishna" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1241,9 +1364,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/suhani.png" alt="error" class="fgsuhani" loading="lazy">
+                      <img src="Assets/suhani.webp" alt="error" class="fgsuhani" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1283,9 +1406,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/satvik.png" alt="error" class="fgsatvik" loading="lazy">
+                      <img src="Assets/satvik.webp" alt="error" class="fgsatvik" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1294,8 +1417,8 @@
                           <a class="btn twitter" href="https://www.instagram.com" target="_blank"><i
                               class="fa fa-instagram"></i></a>
 
-                          <a class="btn linkedin" href="https://www.linkedin.com/in/satvik-choudhary-2a2a51255/" target="_blank"><i
-                              class="fa fa-brands fa-linkedin"></i></a>
+                          <a class="btn linkedin" href="https://www.linkedin.com/in/satvik-choudhary-2a2a51255/"
+                            target="_blank"><i class="fa fa-brands fa-linkedin"></i></a>
                         </div>
 
                       </div>
@@ -1325,9 +1448,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/vedant.png" alt="error" class="fgvedant" loading="lazy">
+                      <img src="Assets/vedant.webp" alt="error" class="fgvedant" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1382,9 +1505,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/kanishka.png" alt="error" class="fgkanishka" loading="lazy">
+                      <img src="Assets/kanishka.webp" alt="error" class="fgkanishka" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1423,9 +1546,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/ikshit.png" alt="error" class="fgikshit" loading="lazy">
+                      <img src="Assets/ikshit.webp" alt="error" class="fgikshit" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1465,9 +1588,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/urva.png" alt="error" class="fgurva" loading="lazy">
+                      <img src="Assets/urva.webp" alt="error" class="fgurva" loading="lazy">
                       <div class="socialmediaicon">
 
                         <div class="social-btns">
@@ -1508,9 +1631,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/shailja.png" alt="error" class="fgshailja" loading="lazy">
+                      <img src="Assets/shailja.webp" alt="error" class="fgshailja" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1553,9 +1676,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/ruchita.png" alt="error" class="fgruchita" loading="lazy">
+                      <img src="Assets/ruchita.webp" alt="error" class="fgruchita" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1596,9 +1719,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/suprit.png" alt="error" class="fgsuprit" loading="lazy">
+                      <img src="Assets/suprit.webp" alt="error" class="fgsuprit" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1637,9 +1760,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="image" class="bgrect" loading="lazy">
 
-                      <img src="Assets/ananya.png" alt="error" class="fgananya" loading="lazy">
+                      <img src="Assets/ananya.webp" alt="image" class="fgananya" loading="lazy">
                       <div class="socialmediaicon">
 
                         <div class="social-btns">
@@ -1678,9 +1801,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/preethi.png" alt="error" class="fgpreethi" loading="lazy">
+                      <img src="Assets/preethi.webp" alt="error" class="fgpreethi" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1719,9 +1842,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/ram.png" alt="error" class="fgram" loading="lazy">
+                      <img src="Assets/ram.webp" alt="error" class="fgram" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1759,9 +1882,9 @@
                   <div class="imagendsocialmediaicon">
                     <div class="teamspagephotocontainer">
 
-                      <img src="Assets/bgred.png" alt="error" class="bgrect" loading="lazy">
+                      <img src="Assets/bgred.webp" alt="error" class="bgrect" loading="lazy">
 
-                      <img src="Assets/Rajeshwari.png" alt="error" class="fgrajeshwari" loading="lazy">
+                      <img src="Assets/Rajeshwari.webp" alt="error" class="fgrajeshwari" loading="lazy">
 
                       <div class="socialmediaicon">
 
@@ -1815,7 +1938,7 @@
         <h4 class="hedfaq2">Frequently Asked Question about CSED</h4>
 
         <div class="imageroatephedfaq">
-          <img src="./assests/asterisk.png" alt="asterick" />
+          <img src="./assests/asterisk.webp" alt="image" loading="lazy" />
           <h2 class="hedfaq">Everything You Need To Know About CSED</h2>
         </div>
       </div>
@@ -1943,7 +2066,7 @@
       <div class="part1">
         <div class="left">
           <div class="logo">
-            <a href="./index.html"><img src="./assests/logo.png" alt="Logo" loading="lazy" /></a>
+            <a href="./index.html"><img src="./assests/logo.webp" alt="image" loading="lazy" /></a>
           </div>
           <h3>Follow Us</h3>
           <div class="social-links">
@@ -2008,7 +2131,7 @@
         <hr>
         <div class="footer-last">
           <div class="last-left">
-            <i class="ri-copyright-line"> <span> 2024, CSED VIT. All Rights
+            <i class="ri-copyright-line"> <span> 2025, CSED VIT. All Rights
                 Reserved.</span></i>
           </div>
           <div class="last-right">
