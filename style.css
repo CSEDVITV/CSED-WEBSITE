@@ -2368,10 +2368,18 @@ body::-webkit-scrollbar {
 #buttonteamspages {
     display: flex;
     align-items: center;
-    gap: 5vw;
+    gap: 4vw;
     width: 100%;
     justify-content: center;
     margin-left: -4.8vw
+}
+
+#buttonteamspages a:first-child {
+    margin-left: 1vw;
+}
+
+#buttonteamspages a:last-child {
+    margin-right: 1vw;
 }
 
 #buttonteamspages p {
@@ -2385,7 +2393,7 @@ body::-webkit-scrollbar {
     position: relative;
     overflow: hidden;
     background-color: #1b1818;
-    padding: 5.5px 2.6vw
+    padding: 5.5px 2.2vw
 }
 
 #buttonteamspages a {
@@ -2415,7 +2423,7 @@ body::-webkit-scrollbar {
     border-radius: .605vw;
     font-weight: 800;
     color: #fff;
-    font-size: 1.693vw;
+    font-size: 1.6vw;
     text-decoration: none;
     position: relative;
     z-index: 9;
@@ -2493,6 +2501,14 @@ body::-webkit-scrollbar {
 #csedteamsimages {
     max-width: 22.786458vw;
     max-height: 26.041667vw
+}
+
+.body1 {
+    height: auto;
+    width: 100%;
+    background-color: #181818;
+    display: block;
+    overflow: clip
 }
 
 .body2 {
@@ -5715,7 +5731,7 @@ button.carousel-control-prev {
     }
 
     #buttonteamspages p {
-        padding: 3px 34px
+        padding: 3px 30px
     }
 
     #buttonteamspages p a {
@@ -5724,15 +5740,23 @@ button.carousel-control-prev {
         border-radius: 9.287px;
         font-weight: 700;
         color: #fff;
-        font-size: 6vw;
+        font-size: 5.5vw;
         text-decoration: none;
         position: relative;
         z-index: 9
     }
 
     #buttonteamspages {
-        gap: 3vw;
+        gap: 2vw;
         margin-left: 0
+    }
+
+    #buttonteamspages a:first-child {
+        margin-left: 5px;
+    }
+
+    #buttonteamspages a:last-child {
+        margin-right: 5px;
     }
 
     .footerteamspage {
@@ -6224,7 +6248,7 @@ button.carousel-control-prev {
     }
 
     #buttonteamspages p {
-        padding: 3px 34px
+        padding: 3px 20px
     }
 
     #buttonteamspages p a {
@@ -6233,15 +6257,23 @@ button.carousel-control-prev {
         border-radius: 9.287px;
         font-weight: 700;
         color: #fff;
-        font-size: 5vw;
+        font-size: 4.25vw;
         text-decoration: none;
         position: relative;
         z-index: 9
     }
 
     #buttonteamspages {
-        gap: 3vw;
+        gap: 2vw;
         margin-left: 0
+    }
+
+    #buttonteamspages a:first-child {
+        margin-left: 5px;
+    }
+
+    #buttonteamspages a:last-child {
+        margin-right: 5px;
     }
 
     .footerteamspage {
@@ -6597,5 +6629,169 @@ button.carousel-control-prev {
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed
+    }
+}
+
+.fgvedant2025 {
+    position: absolute;
+    top: 2%;
+    left: 2.57vw;
+    max-width: 27.344vw;
+    max-height: 46.064815vh;
+}
+
+.fgsnehil2025 {
+    max-width: 21.419vw;
+    max-height: 45.255vh;
+    position: absolute;
+    top: 3.5%;
+    left: 45px;
+}
+
+.fgchanak2025 {
+    max-width: 27.159vw;
+    max-height: 49.675926vh;
+    position: absolute;
+    top: 0.5%;
+    left: 2.127604vw;
+}
+
+.fgparth2025 {
+    max-width: 20.833vw;
+    max-height: 47.907vh;
+    position: absolute;
+
+    left: 2.344vw;
+}
+
+.fgvinod2025 {
+    position: absolute;
+    top: 7.7%;
+    left: 12%;
+    max-width: 27.344vw;
+    max-height: 42.612963vh;
+}
+
+.fglakshya2025 {
+    max-width: 27.344vw;
+    max-height: 45.19vh;
+    position: absolute;
+    top: 2.85%;
+    left: 11%;
+    z-index: 4;
+}
+
+.fgroopa2025 {
+    max-width: 27.34vw;
+    max-height: 42.876vh;
+    position: absolute;
+    top: 7.55%;
+    left: 2.864583vw;
+}
+
+.fgsarvari2025 {
+    max-width: 27.344vw;
+    max-height: 42.702778vh;
+    position: absolute;
+    top: 7.55%;
+    left: 3.145833vw;
+}
+
+.fgaswanth2025 {
+    position: absolute;
+    top: 0.85%;
+    left: 3.130208vw;
+    max-width: 27.344vw;
+    max-height: 45.611111vh;
+}
+
+.fgkashish2025 {
+    max-width: 27.344vw;
+    max-height: 41.19vh;
+    position: absolute;
+    bottom: 3.2%;
+    left: 3.959896vw;
+}
+
+@media screen and (max-width: 380px) {
+    .fgvedant2025 {
+        max-width: 311px;
+        max-height: 305px;
+        position: absolute;
+        top: 7%;
+        left: 13%;
+        z-index: 4;
+    }
+
+    .fgsnehil2025 {
+        max-width: 329px;
+        max-height: 305px;
+        position: absolute;
+        top: 7%;
+        left: 39px;
+    }
+
+    .fgchanak2025 {
+        max-width: 251px;
+        max-height: 395px;
+        position: absolute;
+        top: 7%;
+        left: 40px;
+    }
+
+    .fgparth2025 {
+        max-width: 320px;
+        max-height: 312px;
+        position: absolute;
+        top: 7%;
+        left: 38px;
+    }
+
+    .fgvinod2025 {
+        top: 12%;
+        left: 45px;
+        max-width: 420px;
+        max-height: 283px;
+        position: absolute;
+    }
+
+    .fglakshya2025 {
+        max-width: 420px;
+        max-height: 306px;
+        top: 6%;
+        left: 45px;
+        position: absolute;
+    }
+
+    .fgroopa2025 {
+        max-width: 330px;
+        max-height: 298px;
+        position: absolute;
+        bottom: 2%;
+        left: 36px;
+    }
+
+    .fgsarvari2025 {
+        max-width: 420px;
+        max-height: 293px;
+        bottom: 2%;
+        left: 47px;
+        position: absolute;
+    }
+
+    .fgaswanth2025 {
+        position: absolute;
+        top: 7%;
+        left: 45px;
+        max-width: 420px;
+        max-height: 299px;
+    }
+
+    .fgkashish2025 {
+        max-width: 365px;
+        max-height: 283px;
+        bottom: 2%;
+        left: 47px;
+        position: absolute;
     }
 }

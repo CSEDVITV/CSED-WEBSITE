@@ -1,7 +1,7 @@
 const lenis = new Lenis({
   smooth: true,
   duration: 2.8,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing function for smoothness
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 });
 
 lenis.on("scroll", (e) => {
@@ -21,7 +21,6 @@ function loading() {
   const laptopLoader = document.querySelector(".laptoploader");
   const mobileLoader = document.querySelector(".mobileloader");
 
-  // Wait until both videos are fully loaded
   const laptopPromise = new Promise((resolve) => {
     laptopLoader.onloadeddata = () => resolve();
   });
@@ -77,7 +76,6 @@ function backgrd() {
 }
 backgrd();
 
-// Function to toggle the menu
 function toggleMenu() {
   const menu = document.querySelector(".menu");
   const body = document.body;
@@ -94,7 +92,9 @@ function toggleMenu() {
           body.style.position = "";
         }
       },
-      { once: true }
+      {
+        once: true
+      }
     );
   } else {
     menu.style.display = "flex";
@@ -174,10 +174,12 @@ const menupurchaseicon = document.querySelector(
 );
 
 menupurchase.addEventListener("mouseenter", function () {
+  menupurchaseicon.style.opacity = "1";
   menupurchaseicon.style.transform = "scale(1.1)";
 });
 
 menupurchase.addEventListener("mouseleave", function () {
+  menupurchaseicon.style.opacity = "0";
   menupurchaseicon.style.transform = "scale(1)";
 });
 
@@ -274,22 +276,6 @@ tl99.to("#page2-mobile-cont h4", {
 tl99.to("#page2-mobile-cont h5", {
   opacity: 1,
   duration: 2.7,
-});
-
-ScrollTrigger.create({
-  trigger: ".page2",
-  start: "18% 50%",
-  end: "90% 50%",
-  // markers: true,
-  scrub: 1,
-  onUpdate: (self) => {
-    let rotation = 360 * self.progress;
-    gsap.to(".page2-head .page2-head1 img", {
-      rotation: rotation,
-      ease: "linear",
-      overwrite: "auto",
-    });
-  },
 });
 
 (function () {
@@ -435,41 +421,78 @@ sections.forEach((section) => {
   });
 });
 
-function changeDivision() {
-  const division1 = document.querySelector(".divvb");
+// ==========================================
+// NEW TEAM SWITCHING LOGIC (2025, 2024, 2023)
+// ==========================================
 
-  division1.classList.remove("upward-transition");
+function switchBoard(year) {
+  // 1. Switch the Slider Content
+  const body1 = document.getElementById("body1"); // 2025
+  const body2 = document.getElementById("body2"); // 2024
+  const body3 = document.getElementById("body3"); // 2023
 
-  const myImage = document.getElementById("myImage");
+  if (body1) body1.style.display = "none";
+  if (body2) body2.style.display = "none";
+  if (body3) body3.style.display = "none";
 
-  myImage.classList.remove("fade-out");
-  myImage.classList.add("fade-in");
+  if (year === '2025') {
+    if (body1) {
+      body1.style.display = "block";
+      // Force Swiper update after display change
+      setTimeout(() => {
+        const swiperEl = body1.querySelector(".mySwiper");
+        if (swiperEl && swiperEl.swiper) {
+          swiperEl.swiper.update();
+        }
+      }, 10);
+    }
+  } else if (year === '2024') {
+    if (body2) body2.style.display = "block";
+  } else if (year === '2023') {
+    if (body3) body3.style.display = "block";
+  }
+
+  // 2. Highlight the active button
+  const allBtns = document.querySelectorAll(".btnew");
+  allBtns.forEach(btn => btn.classList.remove("special"));
+
+  const activeBtn = document.getElementById(`btn-${year}`);
+  if (activeBtn) activeBtn.classList.add("special");
+
+  // 3. Update the Left-Side Group Photo & Year Number
+  const leftImage = document.getElementById("myImage");
+  const yearNumber = document.getElementById("remains");
+
+  // Add fade-out effect using existing CSS class
+  leftImage.classList.add("fade-out");
+
   setTimeout(() => {
-    myImage.classList.remove("fade-in");
+    // Change Source based on year
+    if (year === '2025') {
+      leftImage.src = "./Assets/BoardsGroupPhoto2025.png";
+      if (yearNumber) yearNumber.innerText = "5";
+    } else if (year === '2024') {
+      leftImage.src = "./Assets/24 board photo red.webp";
+      if (yearNumber) yearNumber.innerText = "4";
+    } else if (year === '2023') {
+      leftImage.src = "./Assets/teamspageleftimg2.webp";
+      if (yearNumber) yearNumber.innerText = "3";
+    }
+
+    // Remove fade-out and add fade-in
+    leftImage.classList.remove("fade-out");
+    leftImage.classList.add("fade-in");
+  }, 300); // 300ms matches the transition timing feel
+
+  // Cleanup fade-in class after animation completes
+  setTimeout(() => {
+    leftImage.classList.remove("fade-in");
   }, 1000);
-
-  const nodiv = document.querySelector(".nodivvb");
-  const nodiv2 = document.querySelector(".nodivva");
-
-  nodiv.classList.remove("upward-transition");
-  nodiv2.classList.remove("upward-transition");
 }
 
-function changeDivision2() {
-  const division1 = document.querySelector(".divvb");
-
-  division1.classList.add("upward-transition");
-
-  const myImage = document.getElementById("myImage");
-
-  myImage.classList.add("fade-out");
-
-  const nodiv = document.querySelector(".nodivvb");
-  const nodiv2 = document.querySelector(".nodivva");
-
-  nodiv.classList.add("upward-transition");
-  nodiv2.classList.add("upward-transition");
-}
+// ==========================================
+// END NEW LOGIC
+// ==========================================
 
 function blogmediumarrow() {
   var bloggggarrow = document.querySelector(
@@ -532,32 +555,6 @@ function blogss() {
   });
 }
 blogss();
-
-function teams() {
-  var btn2024 = document.getElementById("btn2023");
-  var btn2023 = document.getElementById("btn2024");
-  var body2 = document.getElementById("body2");
-  var body3 = document.getElementById("body3");
-  btn2024.addEventListener("click", () => {
-    body2.style.display = "block";
-    body3.style.display = "none";
-  });
-
-  btn2023.addEventListener("click", () => {
-    body2.style.display = "none";
-    body3.style.display = "block";
-  });
-
-  const btnElList = document.querySelectorAll(".btnew");
-
-  btnElList.forEach((btnEl) => {
-    btnEl.addEventListener("click", () => {
-      document.querySelector(".special")?.classList.remove("special");
-      btnEl.classList.add("special");
-    });
-  });
-}
-teams();
 
 ScrollTrigger.create({
   trigger: ".faqpage",
@@ -637,7 +634,10 @@ function p10() {
   document
     .querySelector(".page10 .part2 .footer-last .last-right")
     .addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
 }
 p10();
@@ -667,19 +667,12 @@ document
     });
   });
 
-var swiper3 = new Swiper("#swiper-3", {
+// Initialize Team Swipers (Targeting class instead of ID to handle multiple instances)
+var teamSwiper = new Swiper(".mySwiper", {
   effect: "creative",
   grabCursor: false,
   observer: true,
   observeParents: true,
-  on: {
-    observerUpdate: () => {
-      if (isFirstUpdate) {
-        mySwiper.update();
-        isFirstUpdate = false;
-      }
-    },
-  },
   creativeEffect: {
     prev: {
       shadow: true,
@@ -705,4 +698,9 @@ var swiper3 = new Swiper("#swiper-3", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+// Initialize default state (2025) to fix refresh issue
+window.addEventListener("load", function () {
+  switchBoard('2025');
 });
