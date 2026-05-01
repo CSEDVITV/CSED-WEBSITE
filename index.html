@@ -4,17 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO META ====== -->
+  <title>CSED VIT — Social Entrepreneurship, Events & Community</title>
   <meta name="description"
     content="CSED VIT fosters social entrepreneurship, development, and impactful business solutions. Explore innovative projects driving change." />
+  <link rel="canonical" href="https://csedvit.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ====== OPEN GRAPH / TWITTER ====== -->
   <meta property="og:title" content="CSED VIT - Empowering Social Entrepreneurship" />
   <meta property="og:description"
     content="CSED VIT fosters social entrepreneurship, development, and impactful business solutions. Explore innovative projects driving change." />
   <meta property="og:image" content="https://csedvit.com/load.jpg" />
   <meta property="og:url" content="https://csedvit.com" />
-  <title>CSED VIT</title>
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ====== AUTHORS ====== -->
   <meta name="author"
-    content="Anurag Adarsh Technical Head '24 , Kamal Sinha Technical Team , Sarthak Krishak Technical Team">
+    content="Sarthak Krishak Technical Team, Anurag Adarsh Technical Team, Kamal Sinha Technical Team">
+
+  <!-- ====== FAVICON ====== -->
   <link rel="icon" href="./assests/favicon-5.ico" type="image/x-icon" />
+
+  <!-- ====== FONTS & CSS ====== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
@@ -22,22 +35,131 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+
+  <!-- =========================================================
+       STRUCTURED DATA FOR GOOGLE RICH RESULTS & SITELINKS
+       ========================================================= -->
+
+  <!-- 1) ORGANIZATION + WEBSITE + NAVIGATION + BREADCRUMBS -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "CSED VIT",
-  "url": "https://csedvit.com",
-  "logo": "./assests/favicon-5.ico",
-  "sameAs": [
-    "https://www.facebook.com/csed.vit.in",
-    "https://x.com/csed_twt",
-    "https://www.instagram.com/csed.vit"
-  ],
-  "description": "CSED VIT fosters social entrepreneurship, development, and impactful business solutions. Explore innovative projects driving change."
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://csedvit.com/#org",
+      "name": "CSED VIT",
+      "url": "https://csedvit.com",
+      "logo": "https://csedvit.com/assests/favicon-5.ico",
+      "sameAs": [
+        "https://www.facebook.com/csed.vit.in",
+        "https://x.com/csed_twt",
+        "https://www.instagram.com/csed.vit"
+      ],
+      "description": "CSED VIT fosters social entrepreneurship, development, and impactful business solutions."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://csedvit.com/#website",
+      "url": "https://csedvit.com/",
+      "name": "CSED VIT",
+      "publisher": { "@id": "https://csedvit.com/#org" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://csedvit.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "Main navigation",
+      "url": [
+        "https://csedvit.com/#page2",
+        "https://csedvit.com/#events",
+        "https://csedvit.com/#blogs",
+        "https://csedvit.com/#teams",
+        "https://csedvit.com/dev.html"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://csedvit.com/#home",
+      "url": "https://csedvit.com/",
+      "name": "CSED VIT — Home",
+      "isPartOf": { "@id": "https://csedvit.com/#website" },
+      "breadcrumb": { "@id": "https://csedvit.com/#breadcrumbs" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://csedvit.com/#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://csedvit.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Events", "item": "https://csedvit.com/#events" },
+        { "@type": "ListItem", "position": 3, "name": "Blogs", "item": "https://csedvit.com/#blogs" }
+      ]
+    }
+  ]
 }
-    </script>
+  </script>
+
+  <!-- 2) FAQ STRUCTURED DATA (MATCHES YOUR VISIBLE FAQ CONTENT) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to join CSED at VIT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can join CSED by registering on VTOP during the club enrollment periods conducted each academic year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of events and activities does CSED organize?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSED organizes events to raise awareness on social entrepreneurship, provide real-world insights, conduct outreach, and host speaker sessions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I participate in CSED events?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can participate by registering through VTOP and following CSED on Instagram for announcements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the departments within CSED?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Departments include R&D, Marketing, Tech & Design, Events, PR, HR, and Editorial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of projects can I work on as a member of CSED?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can work on real-world projects that solve social problems and create meaningful impact."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I stay updated on CSED activities and events?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Follow CSED on Instagram and join the official WhatsApp updates channel."
+      }
+    }
+  ]
+}
+  </script>
 
 </head>
 
@@ -74,16 +196,16 @@
           </div>
           <div class="menu-content">
             <div class="left">
-              <h2>Announcements🚀</h2>
+              <h2>Announcements <i class="ri-megaphone-fill"></i></h2>
               <div class="tr">
-                <div class="blr" t>
-                  <h3>Register Now!</h3>
+                <div class="blr">
+                  <h3>Coming soon!</h3>
                 </div>
                 <img src="./assests/merch.webp" loading="lazy" alt="image" />
               </div>
               <div class="h4-menu">
-                <a href="/startupstreet9.0" target="_blank">
-                  <h4> graVITas '24</h4>
+                <a href="https://www.csedvit.com/" target="_parent">
+                  <h4> Coming Soon </h4><i class="ri-arrow-right-up-line"></i>
                 </a>
               </div>
             </div>
@@ -222,19 +344,19 @@
         <div class="page3-left-bottom">
           <div class="page3-left-bottom-t">
             <div class="page3-left-bottom-t-1">
-              <h3 class="counter" data-count="50">0+</h3>
+              <h3 class="counter" data-count="68">0+</h3>
               <h4>Events Organised</h4>
               <img src="./assests/line.webp" alt="image" loading="lazy" />
             </div>
             <div class="page3-left-bottom-t-2">
-              <h3 class="counter" data-count="20">0+</h3>
+              <h3 class="counter" data-count="25">0+</h3>
               <h4>Inspiring Speaker</h4>
               <img src="./assests/line.webp" alt="image" loading="lazy" />
             </div>
           </div>
           <div class="page3-left-bottom-b">
             <div class="page3-left-bottom-b-1">
-              <h3 class="counter" data-count="5000">0+</h3>
+              <h3 class="counter" data-count="6500">0+</h3>
               <h4>Student Network</h4>
               <img src="./assests/line.webp" alt="image" loading="lazy" />
             </div>
@@ -564,7 +686,7 @@
                 <div class="c3">
                   <div class="c3-top">
                     <div class="c3-top-left">
-                      <h3>IDEATE <br />AROUND <br />THE RIDDLE</h3>
+                      <h3>BID <br />WITH <br />STRATEGY</h3>
                       <img src="./assests/Group 40.webp" alt="image" loading="lazy" />
                     </div>
                     <div class="c3-top-right">
@@ -572,27 +694,27 @@
                     </div>
                   </div>
                   <div class="c3-bot">
-                    <h1>IMAGINE VENTURE</h1>
+                    <h1>ACTION TO AUCTION</h1>
                   </div>
                 </div>
               </div>
               <div class="c4">
                 <div class="c4-top">
                   <div class="c4-top-first">
-                    <i class="ri-calendar-todo-fill"></i><span>2023</span>
+                     <i class="ri-calendar-todo-fill"></i><span>2024</span>
                   </div>
                   <div class="c4-top-second">
-                    <i class="ri-map-pin-fill"></i><span>RAJAJI HALL</span>
+                    <i class="ri-map-pin-fill"></i><span>MGR Block</span>
                   </div>
                 </div>
 
                 <div class="c4-bot">
                   <i class="ri-arrow-right-s-line"></i>
-                  <p>
-                    Imagine Venture was a thrilling event! Teams showcased
-                    ideas, explored social enterprises, and solved riddles.
-                    Collaboration and creativity ignited positive change,
-                    making a real difference!
+                 <p>
+                    A thrilling blend of bidding, teamwork and creativity where participants competed for resources,
+                    joined forces to build
+                    a final product and showcased their ideas with confidence. A day filled with strategy, innovation
+                    and fun.
                   </p>
                 </div>
               </div>
@@ -649,17 +771,16 @@
               <div class="c6">
                 <div class="c6-top">
                   <div class="c6-top-first">
-                    <i class="ri-calendar-todo-fill"></i> <span>2022</span>
+                    <i class="ri-calendar-todo-fill"></i> <span>2024</span>
                   </div>
                   <div class="c6-top-second">
-                    <i class="ri-map-pin-fill"></i><span>HOMI BHABHA
-                      GALLERY</span>
+                    <i class="ri-map-pin-fill"></i><span>TT gallery II</span>
                   </div>
                 </div>
                 <div class="c6-bot">
                   <i class="ri-arrow-right-s-line"></i>
                   <p>
-                    Startup Street 7.0 was electrifying! Teams pitched big
+                    Startup Street 9.0 was electrifying! Teams pitched big
                     ideas to top investors, collaborated on UN SDGs, and heard
                     inspiring talks from leading social entrepreneurs.
                     Innovation and excitement filled the air!
@@ -728,7 +849,7 @@
                       the years......</p>
                   </div>
                   <div class="image-content">
-                    <img src="Assets/blogimg1.webp" alt="error" loading="lazy">
+                   <img src="Assets/blogimg1.webp" alt="image" loading="lazy">
                   </div>
                 </a>
 
@@ -759,7 +880,7 @@
 
                   </div>
                   <div class="image-content" style="background-color: #1B1818">
-                    <img src="Assets/blogimg2.webp" alt="error" loading="lazy">
+                    <img src="Assets/blogimg2.webp" alt="image" loading="lazy">
                   </div>
                 </a>
               </div>
@@ -790,7 +911,7 @@
                 </a>
 
                 <div class="image-content">
-                  <img src="Assets/blogimg3.webp" alt="error" loading="lazy">
+                   <img src="Assets/blogimg3.webp" alt="image" loading="lazy">
                 </div>
               </div>
 
@@ -821,7 +942,7 @@
                   </div>
 
                   <div class="image-content" style="background-color: #1B1818">
-                    <img src="Assets/blogimg4.webp" alt="error" loading="lazy">
+                    <img src="Assets/blogimg4.webp" alt="image" loading="lazy">
                   </div>
                 </a>
               </div>
@@ -852,7 +973,7 @@
                   </div>
 
                   <div class="image-content">
-                    <img src="Assets/blogimg5.webp" alt="error" loading="lazy">
+                   <img src="Assets/blogimg5.webp" alt="image" loading="lazy">
                   </div>
                 </a>
               </div>
@@ -884,7 +1005,7 @@
                   </div>
 
                   <div class="image-content" style="background-color: #1B1818">
-                    <img src="Assets/blogimg6.webp" alt="error" loading="lazy">
+                    <img src="Assets/blogimg6.webp" alt="image" loading="lazy">
                   </div>
                 </a>
               </div>
